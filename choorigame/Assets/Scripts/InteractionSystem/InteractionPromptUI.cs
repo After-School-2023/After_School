@@ -8,6 +8,7 @@ public class InteractionPromptUI : MonoBehaviour
     private Camera _mainCam;
     [SerializeField] private GameObject _uiPanel;
     [SerializeField] private TextMeshProUGUI _promptText;
+    [SerializeField] private TextMeshProUGUI _promptName;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +25,9 @@ public class InteractionPromptUI : MonoBehaviour
 
     public bool IsDisplayed = false;
 
-    public void SetUp(string promptText){
+    public void SetUp(string promptText, string promptName){
         _promptText.text = promptText;
+        _promptName.text = promptName;
         _uiPanel.SetActive(true);
         IsDisplayed = true;
     }
