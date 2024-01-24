@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InteractionControllers : MonoBehaviour
 {
@@ -18,24 +19,30 @@ public class InteractionControllers : MonoBehaviour
     [SerializeField] Inventory theInventory;
 
     private void Update(){
-        
-        if(Physics.Raycast(transform.position, transform.forward, out hitinfo, range, _interactableMask)){
+        // RaycastHit hit;
 
+        if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hitinfo, range, _interactableMask)){
+            Debug.Log("function called3");
             _interactable = hitinfo.collider.GetComponent<IInteractable>();
             if(_interactable != null){
+                Debug.Log("function called2");
                 if (Keyboard.current.eKey.wasPressedThisFrame){
+                    Debug.Log("function called1");
                     _interactionPromptUI.SetUp(_interactable.InteractionPrompt, _interactable.InteractionName);
                     _interactable.Interact(this);
                 }
             }
         }
         else{
+            Debug.Log("function called4");
             if (_interactable != null) _interactable = null;
             if (_interactionPromptUI.IsDisplayed) _interactionPromptUI.Close();
         }
 
-        CheckClue();
-        TryAction();
+        if(SceneManager.GetActiveScene().name == "scene2"){
+            CheckClue();
+            TryAction();
+        }
     }
 
     private void TryAction(){

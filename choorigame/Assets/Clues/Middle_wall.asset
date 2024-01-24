@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Middle_wall
   m_EditorClassIdentifier: 
   clueName: "\uAC00\uBCBD"
-  clueImage: {fileID: 21300000, guid: 751aa1b6637101946b2fdbb7aa27d6ad, type: 3}
+  clueImage: {fileID: 21300000, guid: f222de835eeef534ba9ed2278c85a93e, type: 3}
   clue: "\uAC00\uBCBD \uC815\uB3C4\uB294 \uCDA9\uBD84\uD788 \uB118\uC5B4\uB2E4\uB2D0
     \uC218 \uC788\uB294 \uAD6C\uC870\uB2E4."
   cluePrefab: {fileID: 4702628486499439411, guid: 8051d944bc96ccf49809b141c92c1fbd, type: 3}

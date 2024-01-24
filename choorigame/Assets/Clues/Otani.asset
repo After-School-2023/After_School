@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65611abc32578534196ea13b50d65de2, type: 3}
+  m_Name: Otani
+  m_EditorClassIdentifier: 
+  clueName: "\uC624\uD0C0\uB2C8 \uD615\uC0AC\uC758 \uB2E8\uC11C"
+  clueImage: {fileID: 21300000, guid: a32f3a65cf47c014cbc75acf38fa93a0, type: 3}
+  clue: "\uBB34\uB77C\uD558\uC2DC\uAC00 \uC0AC\uB9DD\uD55C \uAC83\uC73C\uB85C \uCD94\uCE21\uB418\uB294
+    \uC2DC\uAC04\uC740 4\uC2DC\uC5D0\uC11C 6\uC2DC \uC0AC\uC774\uC774\uB2E4. \uADF8\uB9AC\uACE0
+    \uC5EC\uC790\uD0C8\uC758\uC2E4 \uC790\uBB3C\uC1E0\uB97C \uB9C8\uC9C0\uB9C9\uC73C\uB85C
+    \uC0AC\uC6A9\uD55C \uC0AC\uB78C\uC740 [\uD638\uB9AC] \uC120\uC0DD\uC774\uB2E4."
+  cluePrefab: {fileID: 3660169204265411131, guid: 9e92f290c18840941ba4ecf0409e3725, type: 3}
