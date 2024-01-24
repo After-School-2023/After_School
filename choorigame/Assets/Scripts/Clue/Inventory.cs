@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Inventory : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Inventory : MonoBehaviour
     void Update()
     {
         TryOpenInventory();
+        
     }
 
     private void TryOpenInventory(){
@@ -43,8 +45,15 @@ public class Inventory : MonoBehaviour
         for (int i=0; i<slots.Length; i++){
             if(slots[i].clue == null){
                 slots[i].AddClue(_clue, _count);
+                if(i == 4){
+                    Invoke("LoadSceneWithDelay", 5);
+                }
                 return;
             }
         }
+    }
+
+    private void LoadSceneWithDelay(){
+        SceneManager.LoadScene("scene3");
     }
 }
