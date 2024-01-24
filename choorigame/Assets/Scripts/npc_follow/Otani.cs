@@ -50,29 +50,33 @@ public class Otani : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
 
-        if (Input.GetKeyDown(KeyCode.E)){
+        if(Physics.Raycast(ray, out hit)){
+            if (hit.collider.gameObject == otani.gameObject && Input.GetKeyDown(KeyCode.E)){
+                if(interaction_count == 0){
+                    animator.SetTrigger("Interaction");
+                }
 
-            if(interaction_count == 0){
-                animator.SetTrigger("Interaction");
-            }
+                if(interaction_count <= 2){
+                    isPaused = true;
+                } else{
+                    isPaused = false;
+                    interaction_count = 0;
+                    animator.SetTrigger("Interaction");
+                }
 
-            if(interaction_count <= 2){
-                isPaused = true;
-            } else{
-                isPaused = false;
-                interaction_count = 0;
-                animator.SetTrigger("Interaction");
-            }
+                interaction_count++;
 
-            interaction_count++;
-
-            if(isPaused){
-                otani.isStopped = true;
-            }else{
-                otani.isStopped = false;
+                if(isPaused){
+                    otani.isStopped = true;
+                }else{
+                    otani.isStopped = false;
+                }
             }
         }
+        
 
         if (!isPaused)
         {
