@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Slot : MonoBehaviour
 {
@@ -25,6 +26,5 @@ public class Slot : MonoBehaviour
         SetColor(255);
         Debug.Log("Add Clue Function");
     }
-
 
 }
