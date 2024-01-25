@@ -9,11 +9,15 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject go_InventoryBase;
     [SerializeField] private GameObject go_SlotsParent;
     private Slot[] slots;
+    public SceneSwitcher sceneSwitcher;
     // Start is called before the first frame update
     void Start()
     {
         Cursor.visible = true;
         slots = go_SlotsParent.GetComponentsInChildren<Slot>();
+        if (sceneSwitcher == null){
+            sceneSwitcher = FindObjectOfType<SceneSwitcher>();
+        }
     }
 
     // Update is called once per frame
@@ -55,6 +59,6 @@ public class Inventory : MonoBehaviour
     }
 
     private void LoadSceneWithDelay(){
-        SceneManager.LoadScene("scene3");
+        sceneSwitcher.SwitchToScene3();
     }
 }

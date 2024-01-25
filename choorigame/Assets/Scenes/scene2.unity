@@ -1523,6 +1523,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 554310422}
+  - component: {fileID: 554310423}
   m_Layer: 0
   m_Name: PoliceLIne
   m_TagString: Untagged
@@ -1553,6 +1554,21 @@ Transform:
   - {fileID: 1755991248}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &554310423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554310421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4699cc4498d9f144bbab6fa771aeee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene1Index: 0
+  scene2Index: 1
+  scene3Index: 2
 --- !u!1001 &594766386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5577,6 +5593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   go_InventoryBase: {fileID: 756153537}
   go_SlotsParent: {fileID: 419593418}
+  sceneSwitcher: {fileID: 0}
 --- !u!1 &2047252375 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
